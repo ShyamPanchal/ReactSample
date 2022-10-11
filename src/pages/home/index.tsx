@@ -5,7 +5,7 @@ import { AppState } from "../../lib/appState";
 
 type Props = {
   sampleValue: number;
-  callAPI: (data: string) => void;
+  callAPI: (data: { value: number }) => void;
 };
 
 type State = {};
@@ -34,8 +34,8 @@ const mapStateToProps = (state: AppState) => ({
   sampleValue: state.sample.value,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  callAPI(data: string) {
+const mapDispatchToProps = (dispatch: any) => ({
+  callAPI(data: { value: number }) {
     dispatch(sampleActions.sampleActionIncrement(data));
   },
 });
