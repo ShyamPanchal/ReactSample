@@ -11,7 +11,6 @@ const initialState: SampleState = {
 const sampleReducer = (state: SampleState = initialState, action: any) => {
   switch (action.type) {
     case types.ACTION_TYPE_REQUESTED: {
-      console.log("Returing Respose to : " + action.type, action);
       return {
         ...state,
         value: state.value + action.value,
@@ -19,8 +18,17 @@ const sampleReducer = (state: SampleState = initialState, action: any) => {
     }
 
     case types.ACTION_TYPE_SUCCESS: {
-      console.log("Returing Respose to : " + action.type, action.data);
-      return state;
+      return {
+        ...state,
+        value: Math.max(0, state.value - action.value),
+      };
+    }
+
+    case types.ACTION_TYPE_FAILED: {
+      return {
+        ...state,
+        value: initialState.value,
+      };
     }
 
     default:

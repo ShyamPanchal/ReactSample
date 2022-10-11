@@ -1,11 +1,23 @@
 import * as types from "./types";
 
-const sampleAction = (sample: any) => {
-  console.log("Sample action called with: ", sample);
+const sampleActionIncrement = (sample: any) => {
   return {
     type: types.ACTION_TYPE_REQUESTED,
-    ...sample
+    ...sample,
   };
 };
 
-export { sampleAction };
+const sampleActionDecrement = (sample: any) => {
+  return {
+    type: types.ACTION_TYPE_SUCCESS,
+    ...sample,
+  };
+};
+
+const sampleActionReset = (sample: any) => {
+  return {
+    type: types.ACTION_TYPE_FAILED,
+  };
+};
+
+export { sampleActionIncrement, sampleActionDecrement, sampleActionReset };

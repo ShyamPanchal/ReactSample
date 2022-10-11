@@ -1,5 +1,10 @@
+import React from "react";
 import { useDispatch } from "react-redux";
-import { sampleAction } from "../../lib/actions";
+import {
+  sampleActionDecrement,
+  sampleActionIncrement,
+  sampleActionReset,
+} from "../../lib/actions";
 
 function SamplePage() {
   const dispatch = useDispatch();
@@ -7,15 +12,37 @@ function SamplePage() {
     value: 100,
   };
   return (
-    <div className="button-space">
-      <button
-        onClick={() => {
-          dispatch(sampleAction(sample));
-        }}
-      >
-        Increment Button
-      </button>
-    </div>
+    <React.Fragment>
+      <div className="button-space">
+        <button
+          onClick={() => {
+            dispatch(sampleActionIncrement(sample));
+          }}
+        >
+          Increment Button
+        </button>
+      </div>
+
+      <div className="button-space">
+        <button
+          onClick={() => {
+            dispatch(sampleActionDecrement(sample));
+          }}
+        >
+          Decrement Button
+        </button>
+      </div>
+
+      <div className="button-space">
+        <button
+          onClick={() => {
+            dispatch(sampleActionReset(sample));
+          }}
+        >
+          Reset Button
+        </button>
+      </div>
+    </React.Fragment>
   );
 }
 
