@@ -6,3 +6,10 @@ export const topicActionStatus = (data: any) => {
     ...data,
   };
 };
+
+export const topicActionOther = (data: any) => {
+  return {
+    type: topicTypes.TOPIC_ACTION_TYPE_OTHER,
+    ...data,
+  };
+};

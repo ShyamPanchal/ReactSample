@@ -43,7 +43,7 @@ function SamplePage() {
       <div className="button-space">
         <button
           onClick={() => {
-            dispatch(topicActions.topicActionStatus({ value: 999 }));
+            dispatch(topicActions.topicActionOther({ value: 999 }));
           }}
         >
           Call Topic
