@@ -10,11 +10,22 @@ type Props = {
 
 type State = {};
 
-class HomeComponent extends React.Component<Props, State> {
+class HomePage extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {};
   }
+
+  componentDidMount(): void {}
+
+  componentDidUpdate(
+    prevProps: Readonly<Props>,
+    prevState: Readonly<State>,
+    snapshot?: any
+  ): void {}
+
+  componentWillUnmount(): void {}
+
   render() {
     return (
       <React.Fragment>
@@ -40,4 +51,4 @@ const mapDispatchToProps = (dispatch: any) => ({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
