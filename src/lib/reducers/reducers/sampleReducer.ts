@@ -1,8 +1,8 @@
 import * as sampleTypes from "../../types/sampleTypes";
 
-interface SampleState {
+export type SampleState = {
   value: number;
-}
+};
 
 const initialState: SampleState = {
   value: 0,
