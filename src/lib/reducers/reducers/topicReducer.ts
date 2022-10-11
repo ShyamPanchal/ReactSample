@@ -1,8 +1,8 @@
 import * as topicTypes from "../../types/topicTypes";
 
-type TopicState = {
+interface TopicState {
   value: number;
-};
+}
 
 const initialState: TopicState = {
   value: 0,

@@ -5,7 +5,6 @@ import "./header.css";
 
 function Header() {
   const value = useSelector(getSampleData);
-  console.log(useSelector((state: any) => state));
 
   return (
     <div className="container">
