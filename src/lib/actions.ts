@@ -4,7 +4,7 @@ const sampleAction = (sample: any) => {
   console.log("Sample action called with: ", sample);
   return {
     type: types.ACTION_TYPE_REQUESTED,
-    data: sample,
+    ...sample
   };
 };
 
