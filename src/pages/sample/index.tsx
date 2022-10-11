@@ -1,10 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import {
-  sampleActionDecrement,
-  sampleActionIncrement,
-  sampleActionReset,
-} from "../../lib/actions";
+import * as sampleActions from "../../lib/actions/sampleActions";
+import * as topicActions from "../../lib/actions/topicActions";
 
 function SamplePage() {
   const dispatch = useDispatch();
@@ -16,7 +13,7 @@ function SamplePage() {
       <div className="button-space">
         <button
           onClick={() => {
-            dispatch(sampleActionIncrement(sample));
+            dispatch(sampleActions.sampleActionIncrement(sample));
           }}
         >
           Increment Button
@@ -26,7 +23,7 @@ function SamplePage() {
       <div className="button-space">
         <button
           onClick={() => {
-            dispatch(sampleActionDecrement(sample));
+            dispatch(sampleActions.sampleActionDecrement(sample));
           }}
         >
           Decrement Button
@@ -36,10 +33,20 @@ function SamplePage() {
       <div className="button-space">
         <button
           onClick={() => {
-            dispatch(sampleActionReset(sample));
+            dispatch(sampleActions.sampleActionReset(sample));
           }}
         >
           Reset Button
+        </button>
+      </div>
+
+      <div className="button-space">
+        <button
+          onClick={() => {
+            dispatch(topicActions.topicActionStatus({ value: 999 }));
+          }}
+        >
+          Call Topic
         </button>
       </div>
     </React.Fragment>

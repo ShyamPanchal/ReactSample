@@ -1,11 +1,11 @@
 /* Use functional components when only rendering UI or for simple components */
-import React from "react";
 import { useSelector } from "react-redux";
-import "./header.css";
 import { getSampleData } from "../../lib/reducers/selectors";
+import "./header.css";
 
 function Header() {
   const value = useSelector(getSampleData);
+  console.log(useSelector((state: any) => state));
 
   return (
     <div className="container">

@@ -1,22 +1,22 @@
-import * as types from "./types";
+import * as sampleTypes from "../types/sampleTypes";
 
 const sampleActionIncrement = (sample: any) => {
   return {
-    type: types.ACTION_TYPE_REQUESTED,
+    type: sampleTypes.ACTION_TYPE_REQUESTED,
     ...sample,
   };
 };
 
 const sampleActionDecrement = (sample: any) => {
   return {
-    type: types.ACTION_TYPE_SUCCESS,
+    type: sampleTypes.ACTION_TYPE_SUCCESS,
     ...sample,
   };
 };
 
 const sampleActionReset = (sample: any) => {
   return {
-    type: types.ACTION_TYPE_FAILED,
+    type: sampleTypes.ACTION_TYPE_FAILED,
   };
 };
 
