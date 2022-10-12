@@ -1,4 +1,4 @@
-# TruGreen Client
+# React Sample
 
 ## Available Scripts
 
