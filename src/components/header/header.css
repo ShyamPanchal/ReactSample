@@ -1,11 +1,15 @@
 .container {
   padding: 10px;
   text-align: left;
+  display: flex;
+  flex-flow: row;
 }
 
 .header {
   background-color: gray;
-  border-radius: 5px;
+  border-radius: 10px;
+  flex: 1;
+  margin-right: 10px;
 }
 
 p {

@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux"; // react hooks
 import * as sampleActions from "../../lib/actions/sampleActions";
 import * as topicActions from "../../lib/actions/topicActions";
+import "./sample.css";
 
 function SamplePage() {
   const dispatch = useDispatch();

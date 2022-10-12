@@ -1,5 +1,6 @@
 import * as React from "react";
 import { connect } from "react-redux";
+import PageContainer from "../../components/pageContainer";
 import * as sampleActions from "../../lib/actions/sampleActions";
 import { AppState } from "../../lib/appState";
 
@@ -28,7 +29,7 @@ class HomePage extends React.Component<Props, State> {
 
   render() {
     return (
-      <React.Fragment>
+      <PageContainer>
         <button
           onClick={() => {
             this.props.callAPI({ value: 12 });
@@ -36,7 +37,7 @@ class HomePage extends React.Component<Props, State> {
         >
           {this.props.sampleValue}
         </button>
-      </React.Fragment>
+      </PageContainer>
     );
   }
 }
