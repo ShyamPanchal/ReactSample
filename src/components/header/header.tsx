@@ -1,6 +1,6 @@
 /* Use functional components when only rendering UI or for simple components */
 import { useSelector } from "react-redux";
-import { getSampleData } from "../../lib/reducers/selectors";
+import { getSampleData } from "../../lib/selectors";
 import "./header.css";
 
 function Header() {
