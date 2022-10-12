@@ -17,7 +17,7 @@ const sampleReducer = (state: SampleState = initialState, action: any) => {
       };
     }
 
-    case sampleTypes.ACTION_TYPE_SUCCESS: {
+    case sampleTypes.ACTION_TYPE_SUCCEEDED: {
       return {
         ...state,
         value: Math.max(0, state.value - action.value),

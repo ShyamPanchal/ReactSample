@@ -9,7 +9,7 @@ const sampleActionIncrement = (sample: any) => {
 
 const sampleActionDecrement = (sample: any) => {
   return {
-    type: sampleTypes.ACTION_TYPE_SUCCESS,
+    type: sampleTypes.ACTION_TYPE_SUCCEEDED,
     ...sample,
   };
 };
