@@ -17,7 +17,7 @@ export const GET_USER_REQUESTED = "GET_USER_REQUESTED";
 
 is an action.
 
-Note the pattern of naming actions `<verb/action>_<topic>_<request>`
+Note the pattern of naming actions `<verb/action>_<topic>_<request/status>`
 
 The action type mentioned in the above example usually is accompanied by 2 other actions, namely,
 

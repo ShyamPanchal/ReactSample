@@ -1,5 +1,5 @@
 /* Use functional components when only rendering UI or for simple components */
-import { useSelector } from "react-redux";
+import { useSelector } from "react-redux"; // react hook
 import { getSampleData } from "../../lib/selectors";
 import "./header.css";
 

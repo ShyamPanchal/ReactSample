@@ -1,5 +1,5 @@
 import "./App.css";
-import HeaderComponent from "./components/header/header";
+import HeaderComponent from "./components/header";
 import SamplePage from "./pages/sample";
 
 function App() {

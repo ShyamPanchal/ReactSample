@@ -1,1 +1,3 @@
-export const getSampleData = (state: any): string => state.sample.value;
+import { AppState } from "./appState";
+
+export const getSampleData = (state: AppState): number => state.sample.value;

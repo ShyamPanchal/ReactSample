@@ -18,7 +18,8 @@ const config = {
 
 const samplePersistConfig = {
   ...globalConfig,
-  key: "userProfile",
+  key: "sample",
+  // whitelist: ["token"],
 };
 
 const appReducer = combineReducers({
