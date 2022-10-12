@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  react_sample:
+    container_name: react_sample
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - react_sample
+
+networks:
+  react_sample:
+    name: react_sample
